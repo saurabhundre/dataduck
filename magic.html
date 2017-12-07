@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Duck &mdash;</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style type="text/css">
+    body {
+  font: 16px/1.5 'Open Sans', Helvetica, Helvetica Neue, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+}
+ 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+ 
+h1 {
+  padding: 20% 0 0 0;
+  margin: 0;
+  text-align: center;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+h1:before {
+  content: '❤';
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  text-align: center;
+  width: 100px;
+  margin-left: -50px;
+  color: #ff466a;
+  font-size: 30px;
+}
+ 
+p {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+ 
+strong {
+  color: rgba(0, 0, 0, 0.9);
+}
+section {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+ 
+/* Center aligned first section */
+section .inner {
+  margin: 0 auto;
+  max-width: 85%;
+}
+ 
+/* Content of the following sections aligned next to the iphone */
+section .innerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100px, -50%);
+  text-align: left;
+}
+ 
+/* iPhone/Card positioned to the left - this is a default position */
+.iphone {
+  width: 290px;
+  height: 600px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  background-color: #3757D0;
+  background-image: -webkit-radial-gradient(#81bcff, #5d7fce);
+  background-image: radial-gradient(#81bcff, #5d7fce);
+}
+ 
+/* Centered content of the ScrollMagic card */
+.iphone p {
+  font-size: 140px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.9);
+}
+ 
+/* Letters hidden by default */
+.iphone p.screenA, .iphone p.screenB, .iphone p.screenC {
+  opacity: 0;
+  visibility: hidden;
+}
+ 
+/* ScrollMagic hat on top of letters */
+.iphone p.screenHat {
+  z-index: 2;
+}
+.iphone p.screenHat img {
+  max-width: 130px;
+}
+ 
+/* Bullet list */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.features li {
+  position: relative;
+  padding-left: 17px;
+}
+ 
+/* A heart instead of a bullet */
+.features li:before {
+  content: '❤';
+  font-size: 11px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  display: block;
+  color: #ff466a;
+}
+  </style>
+  <body class="blue-header light-bg">
+
+<nav class="navbar navbar-default probootstrap-navbar">
+    <header class="cd-header">
+      
+      <div class="container-fluid">
+        <div class="twelve columns">
+          <div class="logo-wrap">
+            <img src="img/logo.png" alt="">
+          </div>
+          <a class="cd-primary-nav-trigger" href="#0">
+            <span class="cd-menu-text"></span><span class="cd-menu-icon"><label></label></span>
+          </a>
+        </div>
+      </div>    
+      <div class="container">
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-nav-section="home">About</a></li>
+            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</span></a>       
+          <ul class="dropdown-menu" role="menu">
+                <li><a href="#"><img src="img/ui-design-icon.png"><span>UI DESGIN</span></a></li>
+                <li><a href="#"><img src="img/ux-design-icon.png"><span>UX DESGIN</span></a></li>
+                <li><a href="#"><img src="img/branding-icon.png"><span>BRANDING</span></a></li>
+                <li><a href="#"><img src="img/read-icon.png"><span>UX SPRINT</span></a></li>
+              </ul>                
+            </li>
+            <li><a href="#" data-nav-section="pricing">Work</a></li>
+            <li><a href="#" data-nav-section="reviews">Insights</a></li>
+            <li><a href="#" data-nav-section="contact">Contact</a></li>
+            <li><a href="#" data-nav-section="contact">WNY</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div class="cd-primary-nav">
+        <div class="container-fluid text-left">
+          <div class="logo-wrap">
+            <img src="img/logo-white.png" alt="">
+          </div>
+        </div>
+        <div class="cd-scndr-nav">
+          <ul class="cd-accordion-menu probootstrap-animate">
+           <li class="active"><a href="#" data-nav-section="home">About</a></li>
+            <li><a href="#" data-nav-section="features">Services</a></li>
+            <li><a href="#" data-nav-section="pricing">Work</a></li>
+            <li><a href="#" data-nav-section="reviews">Insights</a></li>
+            <li><a href="#" data-nav-section="contact">Contact</a></li>
+            <li><a href="#" data-nav-section="contact">WNY</a></li>
+          </ul> <!-- cd-accordion-menu -->
+        </div>      
+      </div>
+    </nav>  
+      
+    </nav>
+    <main class="blog-banner grey-bg">
+      
+      <section class="module parallax probootstrap-animate" >
+        <div class="container">
+          <h1>What We do</h1>
+          <p>We built engaging, intuitive, usable &
+              beautiful products across digital platforms</p>
+        </div>
+      </section>
+  </main>
+  <section class="probootstrap-section about-help">
+      <div class="container">
+      <h3>Help us help you</h3>
+      <p>Which industry are you from?</p>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#industry" aria-controls="industry" role="tab" data-toggle="tab">Industry</a></li>
+            <li role="presentation"><a href="#industry2" aria-controls="industry" role="tab" data-toggle="tab">Industry</a></li>
+            <li role="presentation"><a href="#industry3" aria-controls="industry" role="tab" data-toggle="tab">Industry</a></li>
+            <li role="presentation"><a href="#industry4" aria-controls="industry" role="tab" data-toggle="tab">Industry</a></li>
+            <li role="presentation"><a href="#industry5" aria-controls="industry" role="tab" data-toggle="tab">Industry</a></li>
+            <li role="presentation"><a href="#industry6" aria-controls="industry" role="tab" data-toggle="tab">Industry</a></li>
+        </ul>
+        <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="industry" align="center">
+                    <div class="container no-padding">
+                      <div class="col-md-12 no-padding">
+                        <div class="col-sm-6 no-padding">
+                          <h1>Industry</h1> 
+                        </div>
+                        <div class="col-sm-6">
+                          <p>About Industry
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                      </div>
+                    </div> 
+                </div>
+                <div role="tabpanel" class="tab-pane" id="industry2">
+                  <div class="container no-padding">
+                      <div class="col-md-12 no-padding">
+                        <div class="col-sm-6 no-padding">
+                          <h1>Industry 2</h1> 
+                        </div>
+                        <div class="col-sm-6">
+                          <p>About Industry
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                      </div>
+                    </div> 
+                </div>
+                <div role="tabpanel" class="tab-pane" id="industry3">
+                  <div class="container no-padding">
+                      <div class="col-md-12 no-padding">
+                        <div class="col-sm-6 no-padding">
+                          <h1>Industry 3</h1> 
+                        </div>
+                        <div class="col-sm-6">
+                          <p>About Industry
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                      </div>
+                    </div> 
+                </div>
+                <div role="tabpanel" class="tab-pane" id="industry4">
+                  <div class="container no-padding">
+                      <div class="col-md-12 no-padding">
+                        <div class="col-sm-6 no-padding">
+                          <h1>Industry 4</h1> 
+                        </div>
+                        <div class="col-sm-6">
+                          <p>About Industry
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                      </div>
+                    </div> 
+                </div>
+                <div role="tabpanel" class="tab-pane" id="industry5">
+                  <div class="container no-padding">
+                      <div class="col-md-12 no-padding">
+                        <div class="col-sm-6 no-padding">
+                          <h1>Industry 5</h1> 
+                        </div>
+                        <div class="col-sm-6">
+                          <p>About Industry
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                      </div>
+                    </div> 
+                </div>
+                <div role="tabpanel" class="tab-pane" id="industry6">
+                  <div class="container no-padding">
+                      <div class="col-md-12 no-padding">
+                        <div class="col-sm-6 no-padding">
+                          <h1>Industry 6</h1> 
+                        </div>
+                        <div class="col-sm-6">
+                          <p>About Industry
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                      </div>
+                    </div> 
+                </div>
+        </div>
+      </div>
+    </section>  
+
+<section id="one">
+    <div class="inner innerS1">
+        <h1>Simple ScrollMagic Tutorial</h1>
+        <p>Learn how to create a <strong>simple scrolling website</strong> using ScrollMagic</p>
+    </div>
+</section>
+<section id="two">
+    <div class="innerText innerS2">
+        <h2>Why to learn ScrollMagic?</h2>
+        <ul class="features">
+            <li>It's great for <strong>story telling websites</strong></li>
+            <li>It gives you <strong>endless creative power</strong></li>
+            <li>It's <strong>easy to use</strong> once you get it</li>
+        </ul>
+    </div>
+</section>
+<section id="three">
+  <div class="innerText innerS3">
+      <h2>When to use ScrollMagic?</h2>
+      <ul class="features">
+        <li>When building <strong>interactive infographics</strong></li>
+        <li>When introducing your <strong>product or service</strong></li>
+        <li>When sharing your <strong>unique story or timeline</strong></li>
+      </ul>
+  </div>
+</section>
+<section id="four">
+    <div class="innerText innerS4">
+  <h2>Want to learn more about ScrollMagic?</h2>
+      <ul class="features">
+        <li>Read the full article <a href="https://ihatetomatoes.net/simple-scrollmagic-tutorial/">Simple ScrollMagic Tutorial</a></li>
+      </ul>
+  </div>
+    <div class="iphone">
+        <p class="screen screenHat"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/107366/img_scrollMagic.png" /></p>
+        <p class="screen screenA">A</p>
+        <p class="screen screenB">B</p>
+        <p class="screen screenC">C</p>
+    </div>
+</section>
+ <section class="probootstrap-section light-bg">
+      <div class="container partners">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="img/partners/daily-hidusam.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/begintoheal.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/straydog.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/4moles.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/regency.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <img src="img/partners/tripifini.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/rudraksha-studio.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/muzibo.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/grouplee.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/pluplay.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <img src="img/partners/blume.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/niravmodi.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/nestopia.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/pescafresh.png">
+          </div>
+          <div class="col-md-2">
+            <img src="img/partners/fam.png">
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <button class="btn btn-primary rounded">OUR WORK</button>
+      </div>
+    </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')
+    </script>
+ <!-- Include ScrollMagic and GSAP plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+<script type="text/javascript">
+  var wh = window.innerHeight,
+  $iphone = $('.iphone'),
+  $innerS1 = $('.innerS1'),
+  $innerS2 = $('.innerS2'),
+  $innerS3 = $('.innerS3'),
+  $innerS4 = $('.innerS4'),
+  $screenHat = $('.screenHat'),
+  $screenA = $('.screenA'),
+  $screenB = $('.screenB'),
+  $screenC = $('.screenC');
+
+  // init
+  var ctrl = new ScrollMagic.Controller({
+      globalSceneOptions: {
+          triggerHook: 'onLeave'
+      }
+  });
+
+  // Create scene
+  $("section").each(function() {
+    
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      duration: '50%'
+    })
+    .setPin(this)
+    .addTo(ctrl);
+   
+  });
+
+  // iPhone intro animation Tween
+  /*
+  var iphoneIntro = TweenMax.from($iphone, 1, {
+    yPercent: 50,
+    xPercent: 100,
+    ease: Cubic.easeOut
+  });
+  */
+
+  // iPhone intro animation Timeline
+  var iphoneIntroTl = new TimelineMax();
+  iphoneIntroTl
+    .from($iphone, 1, {yPercent: 50,xPercent: 100, ease: Power4.easeInOut})
+    .to($innerS1, 0.5, {opacity: 0, yPercent: -5, scale: 0.98}, '0');
+
+  // iPhone back to stylesheet position
+  new ScrollMagic.Scene({
+    duration: '70%'
+  })
+  .setTween(iphoneIntroTl)
+  .triggerElement($('body')[0])
+  .addTo(ctrl);
+  
+  // Animate the hat up, letter A in and fade in content of section 2
+  var iphoneContentHat = new TimelineMax();
+  iphoneContentHat    
+    .to($screenHat, 1, {yPercent: -50, ease: Power4.easeOut})
+    .fromTo($screenA, 1, {yPercent: 20, autoAlpha: 0, scale: 0.8}, {yPercent: 0, autoAlpha: 1, scale: 1, ease: Power4.easeOut}, '0')
+    .from($innerS2, 1, {autoAlpha: 0}, '-=0.3');
+
+  new ScrollMagic.Scene({
+    offset: wh*0.6,
+    triggerElement: $('body')[0],
+    duration: '80%'
+  })
+  .setTween(iphoneContentHat)
+  .addIndicators()
+  .addTo(ctrl);
+
+  // Animate letter A out, letter B in and fade in content of section 3
+  var iphoneContent1Tl = new TimelineMax();
+  iphoneContent1Tl    
+    .to($screenA, 0.3, {yPercent: -30, autoAlpha: 0, ease: Power4.easeInOut})
+    .fromTo($screenB, 1, {yPercent: 20, autoAlpha: 0}, {yPercent: 0, autoAlpha: 1, ease: Power4.easeInOut})
+    .from($innerS3, 1, {autoAlpha: 0}, '-=0.7');
+
+  new ScrollMagic.Scene({
+    triggerElement: $('.innerS2 h2')[0],
+    duration: '50%'
+  })
+  .setTween(iphoneContent1Tl)
+  .addTo(ctrl);
+
+  // Animate letter B out, letter C in and fade in content of section 4
+  var iphoneContent2Tl = new TimelineMax();
+  iphoneContent2Tl    
+    .to($screenB, 0.3, {yPercent: -30, autoAlpha: 0, ease: Power4.easeInOut})
+    .fromTo($screenC, 1, {yPercent: 20, autoAlpha: 0}, {yPercent: 0, autoAlpha: 1, ease: Power4.easeInOut})
+    .from($innerS4, 1, {autoAlpha: 0}, '-=0.7');
+
+  new ScrollMagic.Scene({
+    triggerElement: $('.innerS3 h2')[0],
+    duration: '50%'
+  })
+  .setTween(iphoneContent2Tl)
+  .addTo(ctrl);
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+  var s = $(".iphone");
+  var pos = s.position();            
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop();
+    if (windowpos >= pos.top && windowpos <=2000) {
+      s.addClass("stick");
+    } else {
+      s.removeClass("stick"); 
+    }
+  });
+});
+</script>
+ </body>
+</html>
